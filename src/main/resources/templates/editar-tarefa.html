@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+
+</br>
+<h2>Editar Tarefa</h2>
+
+<form th:action="@{/adicionar}" th:object="${tarefa}" method="post">
+  <input type="hidden" th:field="*{id}">
+  <label for="fname">Nome da Tarefa:</label><br>
+  <input type="text" id="nomeTarefa" name="nomeTarefa" th:field="*{nomeTarefa}">
+  <input type="submit" class="btn btn-success" value="Atualizar">
+</form> 
+
+</div>
+
+</body>
+</html>
